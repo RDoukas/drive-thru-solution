@@ -78,11 +78,11 @@
             yell_count += 1
           end 
         end 
-        puts "Pull up to the first window."
+        puts done_arr.sample
       elsif order == order.upcase
-        puts response_arr.sample
+        puts caps_arr.sample
       else 
-        puts  "I'm sorry, you'll have to speak up Ma'am."
+        puts louder_arr.sample
       end 
     
    end
