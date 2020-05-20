@@ -67,7 +67,7 @@
       done_arr = ["Pull forward to the Texaco station.", "Take a right and go five and a half miles southeast", "Talk to the guy in the yellow ponch, his name is Hank.", "Hank will take you to the whopper lair."]
       louder_arr = ["Can you turn that up for me right now?", "Gotta say it loud, gotta shout it out!", "C'mon people let's get loud"]
       caps_arr = ["Don't look at the menu, look at ME!", "I order for you! DOUBLECHEEZ!", "NO FRIES - CHIPS", "No Pepsi - COKE!", "Excuse me, I'm bleeding from the ears here okay?"]
-      puts "Welcome to Ruby Burger. We have specials on Hamburgers, Fish Fillet and Cookies for a dollar. Can I take your order?"
+      puts welcome_arr.sample
       order = gets.chomp
       if order == "THATS IT"
         yell_count = 1
