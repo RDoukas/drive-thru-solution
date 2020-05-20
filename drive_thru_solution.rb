@@ -89,44 +89,69 @@
 
 #     drive_thru
 
-# Bonus 3
+#Bonus 2
 
   def drive_thru
-
-    menu = {"hamburger" => 3,
-      "chips" => 2, 
-      "double" => 6,
-      "cheeezeburger" => 5, 
-      "double cheeze" => 6.50, 
-      "coke" => 1.5
-      }
       welcome_arr = ["Welcome to Good Burger, home of the Good Burger. Can I take your order?", "Welcome to Burger King. May I please take your order?", "Cheezborger! Cheezborger! You want doublecheez?!?Who’s next!?! WHO’S NEXT!?!"]
       done_arr = ["Pull forward to the Texaco station.", "Take a right and go five and a half miles southeast", "Talk to the guy in the yellow ponch, his name is Hank.", "Hank will take you to the whopper lair."]
       louder_arr = ["Can you turn that up for me right now?", "Gotta say it loud, gotta shout it out!", "C'mon people let's get loud"]
       caps_arr = ["Don't look at the menu, look at ME!", "I order for you! DOUBLECHEEZ!", "NO FRIES - CHIPS", "No Pepsi - COKE!", "Excuse me, I'm bleeding from the ears here okay?"]
-      puts "#{welcome_arr.sample} Here is our menu. Let me know what you want! Enter 'THATS IT' when you're done"  
-      p menu
-      final_order = []
-      total = 0
-      while true  
-        order = gets.chomp
-        if order == "THATS IT"
-          p "#{done_arr.sample} You had #{final_order.join(", ")} and your total is #{total}!"
-          break
-        elsif menu[order] != nil 
-          final_order << order 
-          p menu[order]
-          total += menu[order].to_i
-        elsif order == order.upcase
-          puts caps_arr.sample
-          final_order << order
-        else 
-          puts louder_arr.sample
-          final_order << order
-        end 
-      end
+      puts welcome_arr.sample
+      order = gets.chomp
+      if order.downcase.include? "manager"
+        puts "Sure, I'll grabe a manager ASAP"
+      elsif order == "THATS IT"
+        puts done_arr.sample
+      elsif order == order.upcase
+        puts caps_arr.sample
+      else 
+        puts louder_arr.sample
+      end 
     
    end
 
     drive_thru
+
+
+
+# Bonus 3
+
+#   def drive_thru
+
+#     menu = {"hamburger" => 3,
+#       "chips" => 2, 
+#       "double" => 6,
+#       "cheeezeburger" => 5, 
+#       "double cheeze" => 6.50, 
+#       "coke" => 1.5
+#       }
+#       welcome_arr = ["Welcome to Good Burger, home of the Good Burger. Can I take your order?", "Welcome to Burger King. May I please take your order?", "Cheezborger! Cheezborger! You want doublecheez?!?Who’s next!?! WHO’S NEXT!?!"]
+#       done_arr = ["Pull forward to the Texaco station.", "Take a right and go five and a half miles southeast", "Talk to the guy in the yellow ponch, his name is Hank.", "Hank will take you to the whopper lair."]
+#       louder_arr = ["Can you turn that up for me right now?", "Gotta say it loud, gotta shout it out!", "C'mon people let's get loud"]
+#       caps_arr = ["Don't look at the menu, look at ME!", "I order for you! DOUBLECHEEZ!", "NO FRIES - CHIPS", "No Pepsi - COKE!", "Excuse me, I'm bleeding from the ears here okay?"]
+#       puts "#{welcome_arr.sample} Here is our menu. Let me know what you want! Enter 'THATS IT' when you're done"  
+#       p menu
+#       final_order = []
+#       total = 0
+#       while true  
+#         order = gets.chomp
+#         if order == "THATS IT"
+#           p "#{done_arr.sample} You had #{final_order.join(", ")} and your total is #{total}!"
+#           break
+#         elsif menu[order] != nil 
+#           final_order << order 
+#           p menu[order]
+#           total += menu[order].to_i
+#         elsif order == order.upcase
+#           puts caps_arr.sample
+#           final_order << order
+#         else 
+#           puts louder_arr.sample
+#           final_order << order
+#         end 
+#       end
+    
+#    end
+
+#     drive_thru
 
